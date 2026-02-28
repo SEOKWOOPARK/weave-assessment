@@ -108,21 +108,6 @@ query($owner: String!, $repo: String!, $cursor: String) {
 }
 """
 
-
-# def gql(query: str, variables: dict) -> dict:
-#     """Execute a single GraphQL request, respecting rate limits."""
-#     resp = requests.post(
-#         GRAPHQL_URL,
-#         json={"query": query, "variables": variables},
-#         headers=HEADERS,
-#         timeout=30,
-#     )
-#     resp.raise_for_status()
-#     data = resp.json()
-#     if "errors" in data:
-#         raise RuntimeError(f"GraphQL errors: {data['errors']}")
-#     return data["data"]
-
 import random
 
 def gql(query: str, variables: dict) -> dict:
